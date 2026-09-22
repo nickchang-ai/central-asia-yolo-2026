@@ -1,8 +1,0 @@
-{
-  "name": "central-asia-yolo-2026",
-  "compatibility_date": "2025-06-01",
-  "assets": {
-    "directory": "./public",
-    "not_found_handling": "404-page"
-  }
-}
