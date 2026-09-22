@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>中亞 YOLO 之旅</title>
+<meta name="description" content="亞洲社交恐怖份子 2026 中亞雙國 10 天行程小卡：班機、住宿、票券、簽證文件一頁看完。">
+<style>
+:root{
+  --bg:#f6f1e7; --card:#ffffff; --ink:#1f1b16; --muted:#6b645a; --line:#e6ddcd;
+  --accent:#1d6fa8; --accent-ink:#ffffff;
+  --uz:#1eb53a; --kz:#00afca; --kr:#c8102e;
+  --nick:#1d6fa8; --albert:#2e8b57; --paul:#d9761c; --tbd:#8a8378;
+  --warn-bg:#fff4d6; --warn-ink:#7a5200;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15130f; --card:#211e19; --ink:#f1ece3; --muted:#a49b8d; --line:#37322a;
+    --accent:#5aa9e6; --accent-ink:#0d1a26;
+    --nick:#5aa9e6; --albert:#5fc48e; --paul:#f0a35a; --tbd:#8a8378;
+    --warn-bg:#3a2e0d; --warn-ink:#f2d27c;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15130f; --card:#211e19; --ink:#f1ece3; --muted:#a49b8d; --line:#37322a;
+  --accent:#5aa9e6; --accent-ink:#0d1a26;
+  --nick:#5aa9e6; --albert:#5fc48e; --paul:#f0a35a; --tbd:#8a8378;
+  --warn-bg:#3a2e0d; --warn-ink:#f2d27c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Helvetica Neue",Arial,sans-serif;line-height:1.5;font-size:15px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px calc(24px + env(safe-area-inset-bottom))}
+
+/* header */
+.hero{padding:28px 0 14px}
+.hero .flags{font-size:28px;letter-spacing:2px}
+.hero h1{margin:6px 0 2px;font-size:24px;line-height:1.25;letter-spacing:-.01em}
+.hero h1 small{display:block;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-bottom:4px}
+.hero .meta{color:var(--muted);font-size:13px;margin-top:6px}
+.crew{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;line-height:1.6;white-space:nowrap}
+.chip.nick{background:color-mix(in srgb,var(--nick) 16%,transparent);color:var(--nick)}
+.chip.albert{background:color-mix(in srgb,var(--albert) 16%,transparent);color:var(--albert)}
+.chip.paul{background:color-mix(in srgb,var(--paul) 18%,transparent);color:var(--paul)}
+.chip.all{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink)}
+.chip.tbd{border:1.5px dashed var(--tbd);color:var(--tbd);background:transparent}
+.chip.ok{background:color-mix(in srgb,var(--albert) 14%,transparent);color:var(--albert)}
+.chip.miss{background:var(--warn-bg);color:var(--warn-ink)}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 6px}
+.quick a{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-weight:700;font-size:13px;color:var(--ink);box-shadow:var(--shadow)}
+.quick a:hover{text-decoration:none;border-color:var(--accent)}
+.quick a span.ic{font-size:18px}
+.quick a.wide{grid-column:1/-1}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin:10px -16px 0;padding:8px 16px;border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;color:var(--ink);background:var(--card);border:1px solid var(--line)}
+.nav a:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+
+/* sections */
+section{padding-top:22px;scroll-margin-top:56px}
+h2{font-size:18px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+h2 .sub{font-size:12px;font-weight:600;color:var(--muted);margin-left:auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 4px;font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card .row{display:flex;gap:8px;align-items:flex-start;margin-top:6px;font-size:13.5px}
+.card .row .k{flex:0 0 56px;color:var(--muted);font-size:12px;padding-top:2px}
+.card .row .v{flex:1;min-width:0}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border-radius:9px;font-size:13px;font-weight:700;background:var(--accent);color:var(--accent-ink)}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn.miss{background:var(--warn-bg);color:var(--warn-ink);border:1.5px dashed var(--warn-ink)}
+.note{font-size:12.5px;color:var(--muted);margin-top:6px}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:8px 12px;font-size:13px;margin-top:8px}
+
+/* timeline */
+.day{display:grid;grid-template-columns:52px 1fr;gap:10px;margin-bottom:10px}
+.day .d{background:var(--card);border:1px solid var(--line);border-radius:12px;text-align:center;padding:8px 2px;box-shadow:var(--shadow);align-self:start}
+.day .d b{display:block;font-size:16px;line-height:1.1}
+.day .d span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.day .d i{display:block;font-style:normal;font-size:12px;font-weight:700;margin-top:4px}
+.day .d.uz i{color:var(--uz)} .day .d.kz i{color:var(--kz)} .day .d.kr i{color:var(--kr)}
+.day .body{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;box-shadow:var(--shadow);min-width:0}
+.day .body .route{font-weight:800;font-size:15px}
+.day .body .hi{font-size:13.5px;margin-top:3px}
+.day .body .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:3px 8px;border-radius:8px;background:color-mix(in srgb,var(--ink) 6%,transparent);color:var(--ink);font-weight:600}
+.tag:hover{text-decoration:none;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+.tag .who{font-weight:800}
+.tag.nick .who{color:var(--nick)} .tag.albert .who{color:var(--albert)} .tag.paul .who{color:var(--paul)} .tag.tbd .who{color:var(--tbd)}
+
+/* flights table */
+.pax{margin-bottom:10px}
+.pax h3{font-size:14px;margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.leg{display:grid;grid-template-columns:44px 1fr auto;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px}
+.leg:first-of-type{border-top:0}
+.leg .dt{font-size:12px;color:var(--muted);font-weight:700}
+.leg .fl b{display:block}
+.leg .fl span{color:var(--muted);font-size:12.5px}
+.leg .doc a{font-size:12px}
+.leg .doc .chip{font-size:11px}
+
+/* legend / footer */
+.legend{display:flex;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--muted);margin-top:8px;align-items:center}
+footer{margin-top:28px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.toggle{float:right;font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <button class="toggle" id="themeBtn" type="button" aria-label="切換深淺色">🌓</button>
+  <div class="flags">🇰🇷 🇺🇿 🇰🇿</div>
+  <h1><small>亞洲社交恐怖份子</small>中亞 YOLO 之旅</h1>
+  <div class="meta">2026.10.2（五）→ 10.13（二） · 首爾集合 → 烏茲別克 3 城 → 阿拉木圖 · 3 人</div>
+  <div class="crew">
+    <span class="chip nick">Nick</span>
+    <span class="chip albert">Albert</span>
+    <span class="chip paul">Paul</span>
+    <span class="chip miss">補中 = 負責人還在補連結</span>
+  </div>
+  <div class="quick">
+    <a href="https://drive.google.com/drive/folders/1T0z-s2UUV4qqD1ZY3b-9Hw-rXST3hcXt?usp=sharing" target="_blank" rel="noopener"><span class="ic">📁</span>簽證文件總資料夾</a>
+    <a href="https://drive.google.com/drive/folders/17SxSkpoSbqdqQgW7AirAaUNHATKK6wVh?usp=sharing" target="_blank" rel="noopener"><span class="ic">🚆</span>烏茲別克高鐵票</a>
+    <a href="https://drive.google.com/drive/folders/1XNjkC-sDmxhwM7kFMAKkhBDQ94eEOBqt?usp=drive_link" target="_blank" rel="noopener"><span class="ic">🛂</span>烏茲別克 LOI</a>
+    <a href="https://drive.google.com/drive/folders/1wTwC1j1l_rmKcGEWXuOmPHDGU86fIUR_?usp=drive_link" target="_blank" rel="noopener"><span class="ic">🛂</span>哈薩克 E-Visa</a>
+    <a class="wide" href="https://app.notion.com/p/PRD-Final-9d0f77b4d691831fa7cb015611f1c44d" target="_blank" rel="noopener"><span class="ic">📝</span>Notion 完整行程（每日景點細節）</a>
+  </div>
+</header>
+
+<nav class="nav" aria-label="章節">
+  <a href="#days">📅 每日</a>
+  <a href="#flights">✈️ 班機</a>
+  <a href="#stays">🏨 住宿</a>
+  <a href="#tickets">🎟️ 票券</a>
+  <a href="#visa">🛂 簽證</a>
+  <a href="#tips">💡 提醒</a>
+</nav>
+
+<!-- ================= 每日 ================= -->
+<section id="days">
+  <h2>📅 每日一覽 <span class="sub">點標籤直接跳到負責人與文件</span></h2>
+
+  <div class="day">
+    <div class="d kr"><b>D0</b><span>10/2 五</span><i>首爾</i></div>
+    <div class="body">
+      <div class="route">各地 → 仁川集合</div>
+      <div class="hi">全員 10/2 抵達仁川會合、休整，隔天中午一起飛塔什干。</div>
+      <div class="tags">
+        <a class="tag nick" href="#stay-kim">🏨 Mr. Kim Guesthouse · <span class="who">Nick</span></a>
+        <a class="tag albert" href="#fl-albert">✈️ IT602 20:00→23:30 · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d uz"><b>D1</b><span>10/3 六</span><i>布哈拉</i></div>
+    <div class="body">
+      <div class="route">仁川 → 塔什干 → 布哈拉</div>
+      <div class="hi">15:40 落地塔什干（落地簽/換匯/SIM）→ 19:48 高鐵，00:01 抵布哈拉直奔民宿。</div>
+      <div class="tags">
+        <a class="tag" href="#fl-nick">✈️ HH822 12:10→15:40 · <span class="who">全員同班</span></a>
+        <a class="tag nick" href="#tk-rail1">🚆 塔什干→布哈拉 19:48 · <span class="who">Nick</span></a>
+        <a class="tag albert" href="#stay-bukhara">🏨 Samani B&amp;B · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d uz"><b>D2</b><span>10/4 日</span><i>布哈拉</i></div>
+    <div class="body">
+      <div class="route">布哈拉古城</div>
+      <div class="hi">上午 Labi Hovuz 池畔早餐；14:00–17:00 舊城 16 景點徒步導覽；晚上圓頂市集。</div>
+      <div class="tags">
+        <a class="tag paul" href="#tk-bukhara">🎟️ 城市導覽 14:00 · <span class="who">Paul</span></a>
+        <a class="tag albert" href="#stay-bukhara">🏨 Samani B&amp;B · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d uz"><b>D3</b><span>10/5 一</span><i>撒馬爾罕</i></div>
+    <div class="body">
+      <div class="route">布哈拉 → 撒馬爾罕（深夜高鐵）</div>
+      <div class="hi">白天薩曼尼陵墓、埃米爾夏宮；20:30 到站，21:55 高鐵，00:45 抵撒馬爾罕（請旅館留 late check-in）。</div>
+      <div class="tags">
+        <a class="tag paul" href="#tk-rail2">🚆 布哈拉→撒馬爾罕 21:55 · <span class="who">Paul</span></a>
+        <a class="tag albert" href="#stay-samarkand">🏨 Altair Boutique · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d uz"><b>D4</b><span>10/6 二</span><i>撒馬爾罕</i></div>
+    <div class="body">
+      <div class="route">撒馬爾罕：藍色瓷磚日</div>
+      <div class="hi">09:30 坦杜爾窯烤麵包體驗；比比哈努姆、Siyob 市集、沙赫靜達；晚上雷吉斯坦廣場燈光秀。</div>
+      <div class="tags">
+        <a class="tag paul" href="#tk-bread">🎟️ 做麵包 09:30 · <span class="who">Paul</span></a>
+        <a class="tag albert" href="#stay-samarkand">🏨 Altair Boutique · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d uz"><b>D5</b><span>10/7 三</span><i>塔什干</i></div>
+    <div class="body">
+      <div class="route">撒馬爾罕 → 塔什干</div>
+      <div class="hi">白天雷吉斯坦、Afrasiyab 博物館、Center of Plov；17:40 高鐵，20:12 抵塔什干；晚上 City Park 水舞。</div>
+      <div class="tags">
+        <a class="tag albert" href="#tk-rail3">🚆 撒馬爾罕→塔什干 17:40 · <span class="who">Albert</span></a>
+        <a class="tag albert" href="#stay-tashkent">🏨 Homy House Hotel · <span class="who">Albert</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d kz"><b>D6</b><span>10/8 四</span><i>阿拉木圖</i></div>
+    <div class="body">
+      <div class="route">塔什干 → 阿拉木圖（跨國）</div>
+      <div class="hi">早上地鐵藝術站，10:00 到機場；14:00 落地入住 Airbnb；傍晚 Kok-Tobe 纜車、飛車、夜景。明早 05:00 集合，早睡。</div>
+      <div class="tags">
+        <a class="tag" href="#fl-nick">✈️ KC128 12:30→14:00 · <span class="who">3 人同班，各自訂</span></a>
+        <a class="tag nick" href="#stay-almaty">🏨 Airbnb · <span class="who">Nick</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d kz"><b>D7</b><span>10/9 五</span><i>阿拉木圖</i></div>
+    <div class="body">
+      <div class="route">峽谷湖泊一日遊（05:00–20:30）</div>
+      <div class="hi">查林峽谷、黑峽谷、凱因迪湖、科爾賽湖。帶保暖外套、健行鞋、雨具、行動電源、暈車藥。</div>
+      <div class="tags">
+        <a class="tag paul" href="#tk-almaty">🎟️ 一日遊 05:00 · <span class="who">Paul</span></a>
+        <a class="tag nick" href="#stay-almaty">🏨 Airbnb · <span class="who">Nick</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d kz"><b>D8</b><span>10/10 六</span><i>阿拉木圖</i></div>
+    <div class="body">
+      <div class="route">天山纜車 + 市區</div>
+      <div class="hi">Medeu → Shymbulak 纜車上 3,200m；下午 28 勇士公園、升天大教堂；晚上 Arbat 步行街烤肉。</div>
+      <div class="tags">
+        <a class="tag nick" href="#stay-almaty">🏨 Airbnb · <span class="who">Nick</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d kz"><b>D9</b><span>10/11 日</span><i>阿拉木圖</i></div>
+    <div class="body">
+      <div class="route">採買日 · 歡送 Paul</div>
+      <div class="hi">綠色市場（Rakhat 巧克力）、手抓肉午餐、國家博物館；16:30 送 Paul 去機場。</div>
+      <div class="tags">
+        <a class="tag paul" href="#fl-paul">✈️ AirAsia X 19:00 ALA→KUL→SIN · <span class="who">Paul</span></a>
+        <a class="tag nick" href="#stay-almaty">🏨 Airbnb（Albert / Nick 續住）· <span class="who">Nick</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="d kz"><b>D10</b><span>10/12 一</span><i>返程</i></div>
+    <div class="body">
+      <div class="route">阿拉木圖 → 北京 → 台北</div>
+      <div class="hi">退房寄行李、歌劇院林蔭道/植物園、Dostyk Plaza；18:30 取行李去機場，21:50 起飛。</div>
+      <div class="tags">
+        <a class="tag nick" href="#fl-nick">✈️ CA800 21:50 → CA185 10/13 08:30→11:40 · <span class="who">Nick / Albert</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 班機 ================= -->
+<section id="flights">
+  <h2>✈️ 班機 <span class="sub">首爾→阿拉木圖全員同班，各自訂票</span></h2>
+
+  <div class="card pax" id="fl-nick">
+    <h3><span class="chip nick">Nick</span> 首爾 → 塔什干 ⋯ 阿拉木圖 → 北京 → 台北</h3>
+    <div class="leg"><div class="dt">10/3</div><div class="fl"><b>HH822 Qanot Sharq</b><span>ICN T1 12:10 → TAS T2 15:40 · 7h30</span></div><div class="doc"><span class="chip all">Trip.com</span></div></div>
+    <div class="leg"><div class="dt">10/8</div><div class="fl"><b>KC128 Air Astana</b><span>TAS T2 12:30 → ALA T2 14:00 · 1h30</span></div><div class="doc"><span class="chip all">Trip.com</span></div></div>
+    <div class="leg"><div class="dt">10/12</div><div class="fl"><b>CA800 中國國際航空</b><span>ALA T2 21:50 → PEK T3 05:40 (+1) · 4h50</span></div><div class="doc"><span class="chip all">Trip.com</span></div></div>
+    <div class="leg"><div class="dt">10/13</div><div class="fl"><b>CA185 中國國際航空</b><span>PEK T3 08:30 → TPE T2 11:40 · 3h10</span></div><div class="doc"><span class="chip all">Trip.com</span></div></div>
+  </div>
+
+  <div class="card pax" id="fl-albert">
+    <h3><span class="chip albert">Albert</span> 台北 → 首爾 → 塔什干 ⋯ 阿拉木圖 → 北京 → 台北</h3>
+    <div class="leg"><div class="dt">10/2</div><div class="fl"><b>IT602 台灣虎航</b><span>TPE T1 20:00 → ICN T1 23:30</span></div><div class="doc"><span class="chip albert">自持</span></div></div>
+    <div class="leg"><div class="dt">10/3</div><div class="fl"><b>HH822 Qanot Sharq</b><span>ICN T1 12:10 → TAS T2 15:40</span></div><div class="doc"><span class="chip albert">自持</span></div></div>
+    <div class="leg"><div class="dt">10/8</div><div class="fl"><b>KC128 Air Astana</b><span>TAS T2 12:30 → ALA T2 14:00</span></div><div class="doc"><span class="chip albert">自持</span></div></div>
+    <div class="leg"><div class="dt">10/12</div><div class="fl"><b>CA800 中國國際航空</b><span>ALA T2 21:50 → PEK T3 05:40 (+1)</span></div><div class="doc"><span class="chip albert">自持</span></div></div>
+    <div class="leg"><div class="dt">10/13</div><div class="fl"><b>CA185 中國國際航空</b><span>PEK T3 08:30 → TPE T2 11:40</span></div><div class="doc"><span class="chip albert">自持</span></div></div>
+  </div>
+
+  <div class="card pax" id="fl-paul">
+    <h3><span class="chip paul">Paul</span> 首爾 → 塔什干 ⋯ 阿拉木圖 → 吉隆坡 → 新加坡</h3>
+    <div class="leg"><div class="dt">10/3</div><div class="fl"><b>HH822 Qanot Sharq</b><span>ICN T1 12:10 → TAS T2 15:40</span></div><div class="doc"><span class="chip paul">自持</span></div></div>
+    <div class="leg"><div class="dt">10/8</div><div class="fl"><b>KC128 Air Astana</b><span>TAS T2 12:30 → ALA T2 14:00</span></div><div class="doc"><span class="chip paul">自持</span></div></div>
+    <div class="leg"><div class="dt">10/11</div><div class="fl"><b>AirAsia X</b><span>ALA T2 19:00 → KUL T2 06:10 (+1)</span></div><div class="doc"><span class="chip paul">自持</span></div></div>
+    <div class="leg"><div class="dt">10/12</div><div class="fl"><b>AirAsia（吉隆坡轉機 1h10）</b><span>KUL T2 07:20 → SIN T4 08:30</span></div><div class="doc"><span class="chip paul">自持</span></div></div>
+  </div>
+</section>
+
+<!-- ================= 住宿 ================= -->
+<section id="stays">
+  <h2>🏨 住宿 <span class="sub">共 9 晚</span></h2>
+
+  <div class="card" id="stay-kim">
+    <h3>🇰🇷 Mr. Kim Guesthouse <span class="chip nick">負責人 Nick</span></h3>
+    <div class="row"><div class="k">日期</div><div class="v">10/2（五）1 晚 · 仁川</div></div>
+    <div class="links">
+      <a class="btn" href="https://maps.app.goo.gl/ojHRGpWmBAAVB3KHA" target="_blank" rel="noopener">📍 Google Maps</a>
+      <a class="btn ghost" href="https://drive.google.com/drive/folders/1db4QKbobxO3Lf6DwRAW8wUg9327e7htQ?usp=sharing" target="_blank" rel="noopener">📄 訂房文件</a>
+    </div>
+  </div>
+
+  <div class="card" id="stay-bukhara">
+    <h3>🇺🇿 布哈拉 Samani 住宿加早餐旅館 <span class="chip albert">負責人 Albert</span></h3>
+    <div class="row"><div class="k">日期</div><div class="v">10/3（六）→ 10/5（一）2 晚 · 00:01 深夜抵達，請先請民宿安排接站車</div></div>
+    <div class="links">
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Samani+Bukhara+guest+house" target="_blank" rel="noopener">🗺️ 地圖搜尋</a>
+      <span class="btn miss">📄 訂房連結 Albert 補中</span>
+    </div>
+  </div>
+
+  <div class="card" id="stay-samarkand">
+    <h3>🇺🇿 撒馬爾罕 Altair Boutique <span class="chip albert">負責人 Albert</span></h3>
+    <div class="row"><div class="k">日期</div><div class="v">10/5（一）→ 10/7（三）2 晚 · 00:45 抵達，需預留 late check-in</div></div>
+    <div class="links">
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Altair+Boutique+Samarkand" target="_blank" rel="noopener">🗺️ 地圖搜尋</a>
+      <span class="btn miss">📄 訂房連結 Albert 補中</span>
+    </div>
+  </div>
+
+  <div class="card" id="stay-tashkent">
+    <h3>🇺🇿 塔什干 Homy House Hotel <span class="chip albert">負責人 Albert</span></h3>
+    <div class="row"><div class="k">日期</div><div class="v">10/7（三）1 晚</div></div>
+    <div class="links">
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Homy+House+Hotel+Tashkent" target="_blank" rel="noopener">🗺️ 地圖搜尋</a>
+      <span class="btn miss">📄 訂房連結 Albert 補中</span>
+    </div>
+  </div>
+
+  <div class="card" id="stay-almaty">
+    <h3>🇰🇿 阿拉木圖 市區 Airbnb <span class="chip nick">負責人 Nick</span></h3>
+    <div class="row"><div class="k">日期</div><div class="v">10/8（四）→ 10/12（一）4 晚 · Paul 10/11 先走，Albert / Nick 續住</div></div>
+    <div class="links">
+      <a class="btn" href="https://maps.app.goo.gl/aiRt3PbJY8FNomWW6" target="_blank" rel="noopener">📍 Google Maps</a>
+      <a class="btn ghost" href="https://www.airbnb.com.tw/trips/v1/1764249983098018848/ro/RESERVATION2_CHECKIN/HMMXS8SKR8" target="_blank" rel="noopener">🏠 Airbnb 訂單（需登入）</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 票券 ================= -->
+<section id="tickets">
+  <h2>🎟️ 票券 <span class="sub">高鐵 + GetYourGuide</span></h2>
+
+  <div class="card" id="tk-rail1">
+    <h3>🚆 塔什干 → 布哈拉 <span class="chip nick">票在 Nick 身上</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/3（六）19:48 → 00:01 (+1)</div></div>
+    <div class="links"><a class="btn" href="https://drive.google.com/drive/folders/17SxSkpoSbqdqQgW7AirAaUNHATKK6wVh?usp=sharing" target="_blank" rel="noopener">📄 高鐵票資料夾</a></div>
+  </div>
+
+  <div class="card" id="tk-rail2">
+    <h3>🚆 布哈拉 → 撒馬爾罕 <span class="chip paul">票在 Paul 身上</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/5（一）21:55 → 00:45 (+1)</div></div>
+    <div class="links"><a class="btn" href="https://drive.google.com/drive/folders/17SxSkpoSbqdqQgW7AirAaUNHATKK6wVh?usp=sharing" target="_blank" rel="noopener">📄 高鐵票資料夾</a></div>
+  </div>
+
+  <div class="card" id="tk-rail3">
+    <h3>🚆 撒馬爾罕 → 塔什干 <span class="chip albert">票在 Albert 身上</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/7（三）17:40 → 20:12</div></div>
+    <div class="links"><a class="btn" href="https://drive.google.com/drive/folders/17SxSkpoSbqdqQgW7AirAaUNHATKK6wVh?usp=sharing" target="_blank" rel="noopener">📄 高鐵票資料夾</a></div>
+  </div>
+
+  <div class="card" id="tk-bukhara">
+    <h3>🚶 布哈拉舊城 16 景點徒步導覽 <span class="chip paul">負責人 Paul</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/4（日）14:00–17:00 · 3 位成人 · 訂單 GYGX7M6A9QH8</div></div>
+    <div class="links"><a class="btn" href="https://www.getyourguide.com/booking/E7YQW6CW93F2KJBTDVDQ0B7QS1AUZH27?utm_content=activities_1&partner_id=3F441&visitor_id=62WSR5J7FZ36MGWQMZWOX10ZQIT6GESB&newsletter_subscriber=74889900&utm_source=getyourguide&utm_medium=email_action_based&mtid=ABEBZ_3N16J3" target="_blank" rel="noopener">🎟️ GetYourGuide 訂單</a></div>
+  </div>
+
+  <div class="card" id="tk-bread">
+    <h3>🍞 撒馬爾罕坦杜爾窯烤麵包體驗 <span class="chip paul">負責人 Paul</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/6（二）09:30–11:30 · 3 位成人 · 訂單 GYG2Q895752M</div></div>
+    <div class="links"><a class="btn" href="https://www.getyourguide.com/booking/RE1MA6RQOOQPQGRT46MS4VS4MQRVMCVM?utm_content=activities_1&partner_id=3F441&visitor_id=L6PJTLIU0QEL5AU4KNRWQU8LE24RJS9X&newsletter_subscriber=74889900&utm_source=getyourguide&utm_medium=email_action_based&mtid=ABEBZ_3N16J3" target="_blank" rel="noopener">🎟️ GetYourGuide 訂單</a></div>
+  </div>
+
+  <div class="card" id="tk-almaty">
+    <h3>🏔️ 科爾賽湖・凱因迪湖・查林與黑峽谷一日遊 <span class="chip paul">負責人 Paul</span></h3>
+    <div class="row"><div class="k">時間</div><div class="v">10/9（五）05:00 出發，約 20:00 回市區 · 3 位成人 · 訂單 GYG2Q8958QN9</div></div>
+    <div class="links"><a class="btn" href="https://www.getyourguide.com/zh-tw/booking/P5RZUC3GOLRZXF6AL4AS80YQ96NLF094?utm_content=activities_1&partner_id=3F441&visitor_id=A0U74MATCQ5PD22FMHP31WLLOWL5E44S&newsletter_subscriber=74889900&utm_source=getyourguide&utm_medium=email_action_based&mtid=ABEBZ_3N16J3&visitor-id=P28L4HAG49REL68ZMBIIE1FKO2LZZMTN&locale_autoredirect_optout=true" target="_blank" rel="noopener">🎟️ GetYourGuide 訂單</a></div>
+  </div>
+</section>
+
+<!-- ================= 簽證 ================= -->
+<section id="visa">
+  <h2>🛂 簽證與文件 <span class="sub">全部印紙本</span></h2>
+
+  <div class="card">
+    <h3>🇺🇿 烏茲別克 <span class="chip all">All</span></h3>
+    <div class="row"><div class="k">方式</div><div class="v">Nick / Albert：憑 LOI 落地簽（機場現場付美金新鈔 + 大頭照）<br>Paul：實體簽證已辦妥，無電子文件</div></div>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/drive/folders/1XNjkC-sDmxhwM7kFMAKkhBDQ94eEOBqt?usp=drive_link" target="_blank" rel="noopener">📄 LOI 文件</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🇰🇿 哈薩克 <span class="chip all">All</span></h3>
+    <div class="row"><div class="k">方式</div><div class="v">憑 LOI 編號辦 E-Visa，印出 PDF 隨身帶。只能從 ALA / NQZ 機場入境。</div></div>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/drive/folders/1wTwC1j1l_rmKcGEWXuOmPHDGU86fIUR_?usp=drive_link" target="_blank" rel="noopener">📄 E-Visa + 文件</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📁 簽證總資料夾</h3>
+    <div class="links">
+      <a class="btn ghost" href="https://drive.google.com/drive/folders/1T0z-s2UUV4qqD1ZY3b-9Hw-rXST3hcXt?usp=sharing" target="_blank" rel="noopener">📁 Google Drive</a>
+      <a class="btn ghost" href="https://app.notion.com/p/5b0f77b4d691822cb268811660ff4204" target="_blank" rel="noopener">📝 Notion 簽證/班機紀錄</a>
+    </div>
+    <div class="warn">轉機點 check-in 時地勤要看下一國簽證證明（LOI / E-Visa），沒紙本可能拒登機。</div>
+  </div>
+</section>
+
+<!-- ================= 提醒 ================= -->
+<section id="tips">
+  <h2>💡 行前提醒</h2>
+  <div class="card">
+    <div class="row"><div class="k">💵 美金</div><div class="v">100 元面額新鈔（2013 後版本），無折痕汙損，落地簽櫃檯只收完美新鈔。</div></div>
+    <div class="row"><div class="k">📶 網路</div><div class="v">兩國通用 eSIM，或機場辦實體 SIM（Beeline）。</div></div>
+    <div class="row"><div class="k">🚕 叫車</div><div class="v">烏茲別克用 Yandex Go；塔什干高鐵站出站認明 Yandex 指定上車點。</div></div>
+    <div class="row"><div class="k">🧥 裝備</div><div class="v">10/9 一日遊山區溫差大：防風外套、健行鞋、雨具、行動電源、暈車藥。</div></div>
+    <div class="row"><div class="k">🛫 機場</div><div class="v">國際線起飛前 3 小時到櫃檯。</div></div>
+  </div>
+</section>
+
+<footer>
+  最後更新 2026-09-22 · 摘要自 Notion「PRD Final」· 標「補中」的請負責人補上
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('yolo-theme');if(s)root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var dark=cur?cur==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('yolo-theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
